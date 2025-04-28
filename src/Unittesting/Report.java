@@ -1,4 +1,4 @@
-package Unittesting;
+package unittesting;
 
 public class Report {
 
