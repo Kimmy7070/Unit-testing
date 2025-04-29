@@ -1,4 +1,5 @@
 package unittesting;
-public class RunTests {
+
+public class RunTests{
 
 }
