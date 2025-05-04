@@ -13,11 +13,11 @@ public class RunTests {
         String className = args[0];
         try {
             // Load the target class
-            Class<?> clazz = Class.forName(className);
-            Object   instance = clazz.getDeclaredConstructor().newInstance();
+            Class<?> cls = Class.forName(className);
+            Object instance = cls.getDeclaredConstructor().newInstance();
 
             // Inspect and run all @Testable methods
-            for (Method method : clazz.getDeclaredMethods()) {
+            for (Method method : cls.getDeclaredMethods()) {
                 if (method.isAnnotationPresent(Testable.class)
                  && !Modifier.isPrivate(method.getModifiers())) {
 
@@ -58,7 +58,7 @@ public class RunTests {
         }
 
         // 3) Check expected return type
-        Class<?> returnType      = method.getReturnType();
+        Class<?> returnType = method.getReturnType();
         String   expectedResType = spec.resType().trim();
         if (!expectedResType.isEmpty()) {
             if (!returnType.getSimpleName()
@@ -113,4 +113,4 @@ public class RunTests {
             return null;
         }
     }
-}
+} 
