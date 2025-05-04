@@ -1,4 +1,7 @@
-package unittesting;
+package test;
+
+import unittesting.Testable;
+import unittesting.Specification;
 
 public class MathOpsTests_simple {
 

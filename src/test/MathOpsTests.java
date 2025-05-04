@@ -1,4 +1,4 @@
-package test.unittesting;
+package test;
 
 import unittesting.Testable;
 import unittesting.Specification;
